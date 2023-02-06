@@ -6,8 +6,17 @@ import $ from 'jquery'
 // 如果某个模块中，使用 from 接收到的成员为 undefined，则没必要进行接收
 //因为index1.js文件是模块导入的入口文件,并且bundle.js是由本文件(index1.js)产生的
 //所以在这个文件导入样式
-import'./css/index.css';
-import'./css/index.less';
+// import'./css/index.css';
+//跟下面等价
+import'@/css/index.css';
+
+// import'./css/index.less';
+//跟下面等价
+import'@/css/index.less';
+
+
+// 导入 src/js/test/info.js
+import '@/js/test/info.js'
 
 // 1. 导入图片，得到图片文件
 import logo from './images/logo.jpg'
