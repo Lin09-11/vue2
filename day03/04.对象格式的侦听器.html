@@ -27,10 +27,12 @@
         // 定义对象格式的侦听器
         username: {
           // 侦听器的处理函数
+          // 当监听到username的时候，会自动触发handler这个函数
           handler(newVal, oldVal) {
             console.log(newVal, oldVal)
           },
           // immediate 选项的默认值是 false
+          // immediate为true表示进入的时候自动触发监听
           // immediate 的作用是：控制侦听器是否自动触发一次！
           immediate: true
         }

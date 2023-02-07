@@ -20,6 +20,7 @@
         params: {}
       }) */
 
+      // 将data重命名为res
       const { data: res } = await axios.get('http://www.liulongbin.top:3006/api/getbooks', {
         params: { id: 1 }
       })
@@ -28,7 +29,11 @@
 
     document.querySelector('#btnPOST').addEventListener('click', async function () {
       // axios.post('url', { /* POST 请求体数据 */ })
-      const { data: res } = await axios.post('http://www.liulongbin.top:3006/api/post', { name: 'zs', gender: '女' })
+      const { data: res } = await axios.post('http://www.liulongbin.top:3006/api/post', 
+      { 
+          name: 'zs',
+         gender: '女' 
+      })
       console.log(res)
     })
   </script>

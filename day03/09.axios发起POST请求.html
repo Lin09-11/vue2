@@ -18,6 +18,7 @@
     document.querySelector('#btnPost').addEventListener('click', async function () {
       // 如果调用某个方法的返回值是 Promise 实例，则前面可以添加 await！
       // await 只能用在被 async “修饰”的方法中
+      //const result=await axios---其中result不是真正的数据 真正的数据是result.data()
       const { data } = await axios({
         method: 'POST',
         url: 'http://www.liulongbin.top:3006/api/post',
