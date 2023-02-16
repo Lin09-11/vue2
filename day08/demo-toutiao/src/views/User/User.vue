@@ -44,8 +44,35 @@
 
 <script>
 
+// 导入
+// import request from '@/utils/request.js'
+
+// 按需导入API接口
+import { getArticleListAPI } from '@/api/articleAPI.js'
+
+// 此时获取到的result是一个Promise对象
+// const result = getArticleListAPI(1, 5)
+// console.log(result)
+
 export default {
-  name: 'User'
+  data () {
+    return {
+      page: 1,
+      limit: 5
+    }
+  },
+  created () {
+    this.initArticleList()
+  },
+  name: 'User',
+  methods: {
+    async initArticleList () {
+      // const { data: res } = await Promise对象
+      const { data: res } = await getArticleListAPI(this.page, this.limit)
+
+      console.log(res)
+    }
+  }
 }
 </script>
 
